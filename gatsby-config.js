@@ -15,6 +15,8 @@ module.exports = {
       },
     },
     `gatsby-plugin-mdx`,
-    'gatsby-plugin-postcss',
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-material-ui`,
+    `gatsby-theme-material-ui`
   ],
 }

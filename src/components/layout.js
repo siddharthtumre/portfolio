@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Navbar from './navbar'
+import { Container } from '@mui/material'
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -15,10 +16,10 @@ const Layout = ({ pageTitle, children }) => {
     <div>
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
       <Navbar />
-      <main className='container mx-auto px-4'>
+      <Container fixed>
         <h1>{pageTitle}</h1>
         {children}
-      </main>
+      </Container>
     </div>
   )
 }
